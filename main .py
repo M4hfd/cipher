@@ -12,10 +12,7 @@ print("Третий шифр: "+ cipher_three)
 #4
 first_symbol = message[0]
 last_symbol = message[-1]
-
-length = len(message)
-
-cipher_four = last_symbol + message[1:length-1] + first_symbol
+cipher_four = last_symbol + message[1:-1] + first_symbol
 print("Четвертый шифр: " + cipher_four)
 #5
 cipher_five = message
@@ -24,8 +21,8 @@ cipher_five = message[half_length:] + message[:half_length]
 print("Пятый шифр: " + cipher_five)
 #Рассшифровки
 #1 
-cipher_one = message.replace('о', 'и')
-print("Первая расшифровка: " + cipher_one)
+decipherer_one = message.replace('о', 'и')
+print("Первая расшифровка: " + decipherer_one)
 #2
 print("Вторая расшифровка: " + cipher_two[::-1])
 #3
@@ -46,12 +43,12 @@ last_letter = cipher_four[0]
 
 length = len(cipher_four)
 
-cipher_four = first_symbol + message[1:length-1] + last_symbol
-print("Четвертая расшифровка: " + cipher_four)
+decipherer_four = first_symbol + message[1:length-1] + last_symbol
+print("Четвертая расшифровка: " + decipherer_four)
 #5
 half_length = len(message)//2
-cipher_five = cipher_five[half_length:] + cipher_five[:half_length]
-print("Пятая расшифровка: " + cipher_five)
+decipherer_five = cipher_five[half_length:] + cipher_five[:half_length]
+print("Пятая расшифровка: " + decipherer_five)
 
 
 
